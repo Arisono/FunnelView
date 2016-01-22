@@ -181,18 +181,28 @@ public class FunnelView extends View implements ValueAnimator.AnimatorUpdateList
 
         mPaint1.setColor(Color.parseColor("#F87A27"));
         mPaint1.setStyle(Paint.Style.FILL);
+        mPaint1.setDither(true); //设定是否使用图像抖动处理，会使绘制出来的图片颜色更加平滑和饱满，图像更加清晰
+        mPaint1.setAntiAlias(true);
 
         mPaint2.setColor(Color.parseColor("#FB9E36"));
         mPaint2.setStyle(Paint.Style.FILL);
+        mPaint2.setDither(true);
+        mPaint2.setAntiAlias(true);
 
         mPaint3.setColor(Color.parseColor("#FBC12E"));
         mPaint3.setStyle(Paint.Style.FILL);
+        mPaint3.setDither(true);
+        mPaint3.setAntiAlias(true);
 
         mPaint4.setColor(Color.parseColor("#A1D644"));
         mPaint4.setStyle(Paint.Style.FILL);
+        mPaint4.setDither(true);
+        mPaint4.setAntiAlias(true);
 
         mPaint5.setColor(Color.parseColor("#26BEF4"));
         mPaint5.setStyle(Paint.Style.FILL);
+        mPaint5.setDither(true);
+        mPaint5.setAntiAlias(true);
 
         mPaintLine.setColor(Color.parseColor("#A8ADB2"));
 //        mPaintLine.setColor(Color.parseColor("#A8ADB2"));
@@ -232,7 +242,6 @@ public class FunnelView extends View implements ValueAnimator.AnimatorUpdateList
         //float newY = baseY + offY;
 
         mPaintText.setAlpha(textAlpha);
-        System.out.println("textAlpha=" + textAlpha);
         canvas.drawText("初期沟通(10%)", maxWidth + textStartOffsetX, mLastY - mPath1Height / 2 + offY, mPaintText);
     }
 
