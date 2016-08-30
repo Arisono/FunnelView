@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by zhengjiong on 16/1/20.
+ * Created by Arison on 16/1/20.
  */
 @SuppressLint("NewApi")
 public class FunnelTwoView extends View implements ValueAnimator.AnimatorUpdateListener {

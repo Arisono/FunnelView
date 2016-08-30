@@ -11,6 +11,7 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
     FunnelTwoView funnelView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
         onClickFunnel2(11);
         //onClickFunnelOne();
     }
-
 
 
     @Override
@@ -71,27 +71,31 @@ public class MainActivity extends AppCompatActivity {
         }
         return true;
     }
+
+    /**
+     * @desc:改进版漏斗图展示，动态添加数据填充
+     * @author：Arison on 2016/8/30
+     */
     private void onClickFunnel2(int total) {
         ArrayList<Integer> counts = new ArrayList<>();
         ArrayList<String> colors = new ArrayList<>();
-        int countToatal=0;
-        for(int i=0;i<total;i++){
-           int itemCount=(int)(Math.random()*100+1);
-           counts.add(itemCount);
-           colors.add("#"+getRandColorCode());
-           countToatal=countToatal+itemCount;
-       }
-     
+        int countToatal = 0;
+        for (int i = 0; i < total; i++) {
+            int itemCount = (int) (Math.random() * 100 + 1);
+            counts.add(itemCount);
+            colors.add("#" + getRandColorCode());
+            countToatal = countToatal + itemCount;
+        }
         funnelView.setData(counts, countToatal, colors);
         funnelView.animateY();
-//       new Handler().postDelayed(new Runnable() {
-//           @Override
-//           public void run() {
         Runtime.getRuntime().gc();
-//           }
-//       },3000);
+
     }
 
+    /**
+     * @desc:老版本固定数据填充，不方便扩展
+     * @author：Arison
+     */
     private void onClickFunnelOne() {
         List<Integer> moneys = new ArrayList<>();
         int x1 = 5000;
@@ -104,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
         moneys.add(x4);
         int x5 = 9000;
         moneys.add(x5);
-        int x6 =500;
+        int x6 = 500;
         moneys.add(x6);
         int x7 = 7000;
         moneys.add(x7);
@@ -112,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
         moneys.add(x8);
         int x9 = 3000;
         moneys.add(x9);
-        int x10= 5000;
+        int x10 = 5000;
         moneys.add(x10);
 //        FunnelView funnelView = (FunnelView) findViewById(R.id.funnelview);
 //
@@ -132,11 +136,9 @@ public class MainActivity extends AppCompatActivity {
         r = Integer.toHexString(random.nextInt(256)).toUpperCase();
         g = Integer.toHexString(random.nextInt(256)).toUpperCase();
         b = Integer.toHexString(random.nextInt(256)).toUpperCase();
-
         r = r.length() == 1 ? "0" + r : r;
         g = g.length() == 1 ? "0" + g : g;
         b = b.length() == 1 ? "0" + b : b;
-
         return r + g + b;
     }
 }
