@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.xzjmyk.pm.activity.MainActivity">
+    <item
+        android:id="@+id/f1"
+        android:title="三角形"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/f2"
+        android:title="梯形"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/f3"
+        android:title="5条"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/f4"
+        android:title="10条"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/f5"
+        android:title="15条"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/f6"
+        android:title="30条"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/f7"
+        android:title="50条"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/f8"
+        android:title="65条"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/f9"
+        android:title="80条"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/f10"
+        android:title="100条"
+        app:showAsAction="ifRoom" />
+</menu>

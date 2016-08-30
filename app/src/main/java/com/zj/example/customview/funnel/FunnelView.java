@@ -19,6 +19,7 @@ import java.util.List;
  * Created by zhengjiong on 16/1/20.
  */
 public class FunnelView extends View implements ValueAnimator.AnimatorUpdateListener{
+    
     public static final float ANGLE_SCALE = 3.0f;
     private List<Integer> mMoneys = new ArrayList<>();
     private int maxMoney;

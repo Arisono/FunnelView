@@ -6,11 +6,14 @@
     android:layout_height="match_parent"
     android:background="#C0C1C2"
     tools:context="com.zj.example.customview.funnel.MainActivity">
-
-    
-    <com.zj.example.customview.funnel.FunnelView
+    <com.zj.example.customview.funnel.FunnelTwoView
+        android:id="@+id/funnelview2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"/>
+   <!-- <com.zj.example.customview.funnel.FunnelView
         android:id="@+id/funnelview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#ffffff"/>
+        android:background="#ffffff"/>-->
 </RelativeLayout>
